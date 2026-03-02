@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom Chai our code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLange(langeName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langeName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLange("Python")
+    addLange("Ruby")
+
+    function addOptiLanguge(addLangeName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(addLangeName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguge('c#')
+    addOptiLanguge('c++')
+
+
+    //edit
+    const secondLange = document.querySelector('li:nth-child(2)')
+    // secondLange.innerHTML = 'GO JO'
+    const newLi = document.createElement('li')
+    newLi.textContent = 'GO JO'
+    secondLange.replaceWith(newLi)
+
+    //edit 
+    const firstLange = document.querySelector('li:first-child')
+    firstLange.outerHTML = '<li>TypeScript</li>'
+
+
+    //remove
+    const lastLange = document.querySelector('li:last-child')
+    lastLange.remove()
+</script>
+</html>
