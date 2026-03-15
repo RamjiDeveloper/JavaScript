@@ -19,7 +19,10 @@ buttons.forEach( (button) => {
                 body.style.background = 'orange'
                 break;
             case 'yellow':
-                body.style.background = 'skyBlue'
+                body.style.background = 'skyblue'
+                break;
+            case 'red':
+                body.style.background = 'white'
                 break;
         
             default:
